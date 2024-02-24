@@ -83,8 +83,7 @@ main {
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slidein .25s;
   border: 1px solid #69526b;
 }
 
@@ -180,5 +179,14 @@ footer a {
 
   .light {
     --bgurl: url("./assets/bg-desktop-light.jpg");
+  }
+}
+
+@keyframes slidein{
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
   }
 }
