@@ -80,10 +80,16 @@ main {
   left: 0;
   z-index: 1;
   transform: translate(0, -50%);
+
+  animation: slideout .2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlightcolor);
 }
 
 .light #switch button {
-  animation: slidein .25s;
+  animation: slidein .2s forwards;
   border: 1px solid #69526b;
 }
 
@@ -182,11 +188,20 @@ footer a {
   }
 }
 
-@keyframes slidein{
+@keyframes slidein {
   from {
     left: 0;
   }
   to {
     left: 50%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
